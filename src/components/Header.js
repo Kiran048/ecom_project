@@ -1,5 +1,5 @@
 import React from  "react";
-import { Link, NavLink } from "react-router-dom";
+import {  NavLink } from "react-router-dom";
 export default function Header() {
     return (
         <nav className="navbar bg-dark color-primary justify-content-center">
@@ -14,34 +14,39 @@ export default function Header() {
                 </NavLink>
             </li>
             <li className="nav-link">
-                <Link to='/Homeneeds' className="nav-link">
+                <NavLink to='/Homeneeds' className="nav-link" activeClassName="btn btn-primary">
                     HOME NEEDS
-                </Link>
+                </NavLink>
             </li>
             <li className="nav-link">
-                <Link to='/Fashion' className="nav-link">
+                <NavLink to='/Fashion' className="nav-link" activeClassName="btn btn-primary">
                     FASHION
-                </Link>
+                </NavLink>
             </li>
             <li className="nav-link">
-                <Link to='/Footwear' className="nav-link">
+                <NavLink to='/Footwear' className="nav-link" activeClassName="btn btn-primary">
                     FOOTWEAR
-                </Link>
+                </NavLink>
             </li>
             <li className="nav-link">
-                <Link to='/Sportstoys' className="nav-link">
+                <NavLink to='/Sportstoys' className="nav-link" activeClassName="btn btn-primary">
                     SPORTS&TOYS
-                </Link>
+                </NavLink>
             </li>
             <li className="nav-link">
-                <Link to='/Luggage' className="nav-link">
+                <NavLink to='/Luggage' className="nav-link" activeClassName="btn btn-primary">
                     LUGGAGE
-                </Link>
+                </NavLink>
             </li>
             <li className="nav-link">
-                <Link to='/Electronics' className="nav-link">
+                <NavLink to='/Electronics' className="nav-link" activeClassName="btn btn-primary">
                     ELECTRONICS
-                </Link>
+                </NavLink>
+            </li>
+            <li className="nav-link">
+                <NavLink to='/Login' className="nav-link" activeClassName="btn btn-primary">
+                    LOGIN
+                </NavLink>
             </li>
            
         </nav>

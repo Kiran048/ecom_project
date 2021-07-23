@@ -12,6 +12,7 @@ import Footwear from './components/Footwear';
 import Sportstoys from './components/Sportstoys';
 import Luggage from './components/Luggage';
 import Electronics from './components/Electronics';
+import Login from './components/Login';
 
 function App() {
 
@@ -19,7 +20,6 @@ function App() {
   console.log(location);
   return (
     <div className="App">
-<<<<<<< HEAD
       <Header />
       <Switch>
         
@@ -61,6 +61,10 @@ function App() {
               <h1>this is Homeneeds</h1>
               <Homeneeds />
           </Route>
+          <Route path="/Login" exact>
+              <h1>this is Login</h1>
+              <Login />
+          </Route>
         
         </Switch>
       {/* {location==="/" && <Content /> }
@@ -72,9 +76,9 @@ function App() {
       {location==="/Sportstoys" && <Sportstoys />}
       {location==="/Luggage" && <Luggage />}
       {location==="/Electronics" && <Electronics />} */}
-=======
+
       
->>>>>>> 655d6e3b57322e45f6ea2b355f28bd61e338069c
+
     </div>
   );
 }
