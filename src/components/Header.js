@@ -4,7 +4,7 @@ export default function Header() {
     return (
         <nav className="navbar bg-dark color-primary justify-content-center">
             <li className="nav-link">
-                <NavLink to='/Content' className="nav-link" activeClassName="btn btn-primary">
+                <NavLink to='/Home' className="nav-link" activeClassName="btn btn-primary">
                     HOME
                 </NavLink>
             </li>
@@ -46,6 +46,11 @@ export default function Header() {
             <li className="nav-link">
                 <NavLink to='/Login' className="nav-link" activeClassName="btn btn-primary">
                     LOGIN
+                </NavLink>
+            </li>
+            <li className="nav-link">
+                <NavLink to='/logout' onClick={() => localStorage.clear()}  className="nav-link" activeClassName="btn btn-primary">
+                    LOGOUT
                 </NavLink>
             </li>
            

@@ -1,7 +1,7 @@
 
-import { Route, Switch } from 'react-router-dom/cjs/react-router-dom.min';
+import { Redirect, Route, Switch } from 'react-router-dom/cjs/react-router-dom.min';
 import './App.css';
-import Content from './components/Content';
+import Home from './components/Home';
 import Header from './components/Header';
 
 import About from './components/About';
@@ -13,6 +13,8 @@ import Sportstoys from './components/Sportstoys';
 import Luggage from './components/Luggage';
 import Electronics from './components/Electronics';
 import Login from './components/Login';
+import Logout from './components/logout';
+import PrivateRoute from './components/PrivateRoute';
 
 function App() {
 
@@ -23,47 +25,52 @@ function App() {
       <Header />
       <Switch>
         
-          <Route path="/" exact>
+          <PrivateRoute path="/Home" exact>
               <h1>this is Home</h1>
-              <Content />
-          </Route>
+              <Home />
+          </PrivateRoute>
           <Route path="/About" exact>
               <h1>this is About</h1>
               <About />
           </Route>
-          <Route path="/Groceries" exact>
+          <PrivateRoute path="/Groceries" exact>
               <h1>this is Groceries</h1>
               <Groceries />
-          </Route>
-          <Route path="/Fashion" exact>
+          </PrivateRoute>
+          <PrivateRoute path="/Fashion" exact>
               <h1>this is Fashion</h1>
               <Fashion />
-          </Route>
-          <Route path="/Footwear" exact>
-              <h1>this is Home</h1>
+          </PrivateRoute>
+          <PrivateRoute path="/Footwear" exact>
+              <h1>this is Footwear</h1>
               <Footwear />
-          </Route>
-          <Route path="/Sportstoys" exact>
-              <h1>this is Home</h1>
+          </PrivateRoute>
+          <PrivateRoute path="/Sportstoys" exact>
+              <h1>this is Sportstoys</h1>
               <Sportstoys />
-          </Route>
-          <Route path="/Luggage" exact>
-              <h1>this is Home</h1>
+          </PrivateRoute>
+          <PrivateRoute path="/Luggage" exact>
+              <h1>this is Luggage</h1>
               <Luggage />
-          </Route>
-          <Route path="/Electronics" exact>
-              <h1>this is Home</h1>
+          </PrivateRoute>
+          <PrivateRoute path="/Electronics" exact>
+              <h1>this is Electronics</h1>
               <Electronics />
-          </Route>
+          </PrivateRoute>
           
 
-          <Route path="/Homeneeds" exact>
+          <PrivateRoute path="/Homeneeds" exact>
               <h1>this is Homeneeds</h1>
               <Homeneeds />
-          </Route>
+          </PrivateRoute>
           <Route path="/Login" exact>
               <h1>this is Login</h1>
               <Login />
+          </Route>
+          <Route path="/logout" exact>
+              <h1>this is Logout</h1>
+              <Redirect to="/login" />
+              
           </Route>
         
         </Switch>
