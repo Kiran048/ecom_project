@@ -19,6 +19,7 @@ function App() {
   console.log(location);
   return (
     <div className="App">
+<<<<<<< HEAD
       <Header />
       <Switch>
         
@@ -71,6 +72,9 @@ function App() {
       {location==="/Sportstoys" && <Sportstoys />}
       {location==="/Luggage" && <Luggage />}
       {location==="/Electronics" && <Electronics />} */}
+=======
+      
+>>>>>>> 655d6e3b57322e45f6ea2b355f28bd61e338069c
     </div>
   );
 }
